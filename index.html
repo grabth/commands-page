@@ -1,96 +1,396 @@
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.o">
-	<title>owh "Sang Robot"</title>
-    <link rel="shortcut icon" type="image/x-icon" href="sangroboticon.ico">
-	<style>
-		body{
-			background-color: #111;
-			margin: 0;
-			height: 100vh;
-			display: flex;
-			justify-content: center;
-			align-items: center; 
-		}
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sang Robot "owh"</title>
+		<link rel="shortcut icon" type="image/x-icon" href="sangroboticon.ico">
+		<link rel="stylesheet" href="styles.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+		<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+	</head>
+	<body>
 
-		.container{
-			width: 90%;
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-			grid-gap: 20px;
-		}
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">1</div>
+				<div class="acc-title">owhhelp</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Menunjukkan semua command pada BOT.
+			</li>
+		</ul>
 
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">2</div>
+				<div class="acc-title">owhsay</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Mengirim ulang pesan mu.
+			</li>
+		</ul>
 
-		.box{
-			height: 200px;
-			color: white;
-			border: 2px solid white;
-			position: relative;
-		}
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">3</div>
+				<div class="acc-title">owhpython</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Mengirim ulang kode Python mu dalam bentuk yang lebih efisien.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">4</div>
+				<div class="acc-title">owhping</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Melihat latency BOT.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">5</div>
+				<div class="acc-title">owhnanya</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Untuk bertanya kepada BOT, jangan yang aneh aneh bro 😳.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">6</div>
+				<div class="acc-title">owhangka</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Untuk menampilkan angka random.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">7</div>
+				<div class="acc-title">owhmasuksurga</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Menampilkan kemungkinan pengguna masuk surga😳.
+			</li>
+			<li>Bercanda pack xixixi</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">8</div>
+				<div class="acc-title">owhmasukneraka</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Menampilkan kemungkinan pengguna masuk neraka😱.
+			</li>
+			<li>Bercanda pack xixixi</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">9</div>
+				<div class="acc-title">owhsend</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Mengirim ulang pesanmu melalui dm.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">10</div>
+				<div class="acc-title">owhpoll</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Membuat poll.
+			</li>
+			<li>Bisa digunakan untuk survey.</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">11</div>
+				<div class="acc-title">owhiq</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Menampilkan IQ pengguna😏.
+			</li>
+			<li>Bercanda pack xixixi</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">12</div>
+				<div class="acc-title">quote</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Mengirimkan quotes - quotes dari tokoh-tokoh terkenal.
+			</li>
+			<li>quote anak epep gak termasuk ye.</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">13</div>
+				<div class="acc-title">owhwanted</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Menampilkan foto wanted dengan isi profil user.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">14</div>
+				<div class="acc-title">owhrip</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Menampilkan foto kuburan dengan isi foto profil user.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">15</div>
+				<div class="acc-title">owhmeme</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Mengirimkan meme.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">16</div>
+				<div class="acc-title">owhgif</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Mencari GIF.
+			</li>
+			<li>sumber GIF dari GIPHY.</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">17</div>
+				<div class="acc-title">owhvote</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Menampilkan link untuk meng-upvote BOT.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">18</div>
+				<div class="acc-title">owhavatar</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Menampilkan avatar seorang user.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">19</div>
+				<div class="acc-title">owhtambah</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Untuk melakukan kalkulasi pertambahan.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">20</div>
+				<div class="acc-title">owhkurang</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Untuk melakukan kalkulasi pengurangan.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">21</div>
+				<div class="acc-title">owhkali</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Untuk melakukan kalkulasi perkalian.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">22</div>
+				<div class="acc-title">owhkucing</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				menampilkan gambar-gambar kucing.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">23</div>
+				<div class="acc-title">owhpikachu</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				menampilkan gif berisi pikachu.
+			</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">24</div>
+				<div class="acc-title">owhfox</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				menampilkan gambar gambar rubah.
+			</li>
+		</ul>
+		<script>
+			let parent = document.querySelectorAll("[data-collapse");
+			parent.forEach((element) => {
+				let clickTarget = element.querySelector("*");
+				let collapseElement = element.nextElementSibling;
+				let collapseElementChildren = collapseElement.children;
+				let tl = new TimelineMax({
+					reversed: true,
+					paused: true,
+				});
 
-		h2{
-			text-transform: uppercase;
-			font-family: Verdana, Geneva, Tahoma, sans-serif;
-			margin: 0;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-	</style>
-</head>
-    <link rel="shortcut icon" type="image/x-icon" href="sangroboticon.ico">
-<body>
-	<div class="container">
-		<div class="box">
-			<h2>owhhelp</h2>
-		</div>
-		<div class="box">
-			<h2>owhsay</h2>
-		</div>
-		<div class="box">
-			<h2>owhpython<h2>	
-		</div>
-		<div class="box">
-			<h2>owhping<h2>
-		</div>
-		<div class="box">
-			<h2>owhnanya<h2>
-		</div>
-		<div class="box">
-			<h2>owhangka</h2>  
-		</div>
-		<div class="box">
-			<h2>owhms</h2>
-		</div>
-		<div class="box">
-			<h2>owhmn<h2>	
-		</div>
-		<div class="box">
-			<h2>owhsend<h2>
-		</div>
-		<div class="box">
-			<h2>owhpoll<h2>
-		</div>
-		<div class="box">
-			<h2>owhtictactoe</h2>
-		</div>
-		<div class="box">
-			<h2>owhiq</h2>
-		</div>
-		<div class="box">
-			<h2>quote</h2>
-		</div>
-		<div class="box">
-			<h2>owhwanted</h2>
-		</div>
-		<div class="box">
-			<h2>owhrip</h2>
-		</div>
-		<div class="box">
-			<h2>More coming soon...</h2>
-		</div>
-	</div>
-</body>
-<html>
+				tl.from(
+					collapseElement,
+					1.6,
+					{
+						className: "+=heightZero",
+						ease: Expo.easeInOut,
+					},
+					"open"
+				);
+				tl.staggerFrom(
+					collapseElementChildren,
+					1,
+					{
+						autoAlpha: 0,
+						y: "40%",
+						ease: Expo.easeInOut,
+					},
+					0.08,
+					"open+=.1"
+				);
+
+				clickTarget.addEventListener("click", () => {
+					tl.reversed() ? tl.play() : tl.reverse();
+				});
+			});
+		</script>
+	</body>
+</html>
